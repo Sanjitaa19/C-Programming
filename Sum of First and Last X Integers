@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+  int N, X, i;
+  int sum1 = 0, sum2 = 0;
+
+  // Read the number of integers (N)
+  scanf("%d", &N);
+
+  // Read the N integers
+  int arr[N];
+  for (i = 0; i < N; i++) {
+    scanf("%d", &arr[i]);
+  }
+
+  // Read the value of X
+  scanf("%d", &X);
+
+  
+  for (i = 0; i < X; i++) {
+    sum1 += arr[i];
+  }
+
+  
+  for (i = N - X; i < N; i++) {
+    sum2 += arr[i];
+  }
+
+  // Print the sum of S1 and S2
+  printf("%d\n", sum1 + sum2);
+
+  return 0;
+}
