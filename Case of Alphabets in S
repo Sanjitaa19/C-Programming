@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main() {
+    char s[51];
+    scanf("%s", s);  // Correct input handling
+
+    int is_uppercase = 1, is_lowercase = 1;
+
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            is_lowercase = 0;  // If any uppercase character exists, not all are lowercase
+        } else if (s[i] >= 'a' && s[i] <= 'z') {
+            is_uppercase = 0;  // If any lowercase character exists, not all are uppercase
+        }
+    }
+
+    if (is_uppercase)
+        printf("UPPERCASE STRING");
+    else if (is_lowercase)
+        printf("LOWERCASE STRING");
+    else
+        printf("ALPHABETS STRING");
+
+    return 0;
+}
