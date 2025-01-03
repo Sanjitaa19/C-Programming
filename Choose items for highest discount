@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    char aa[1001], u[1001];
+    int d,p, o, e = 0;
+    
+    for(int i=0; i<n; i++) {
+        scanf("%s %d %d", &aa, &d, &p);
+        o = p - (p * d) / 100; // Calculate savings
+        if(o > e) { // Compare savings
+            e = o;
+            strcpy(u, aa);
+        }
+    }
+    printf("%s\n",u);
+    return 0;
+}
