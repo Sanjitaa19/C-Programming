@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);  // Read N (total students) and M (minimum students required on time)
+    
+    int h, mm, cs;
+    int c = 0;  // Initialize count of students arriving on time
+    char ct[6];  // To hold class start time
+    scanf("%s", ct);  // Read the class start time
+    
+    // Convert class start time (HH:MM) to total minutes
+    sscanf(ct, "%d:%d", &h, &mm);
+    cs = h * 60 + mm;
+    
+    for (int i = 0; i < n; i++) {
+        char a[6];  // To hold student's arrival time
+        int ah, am, ak;
+        scanf("%s", a);  // Read the student's arrival time
+        
+        // Convert student's arrival time (HH:MM) to total minutes
+        sscanf(a, "%d:%d", &ah, &am);
+        ak = ah * 60 + am;
+        
+        // Check if the student is on time (arrival time <= class start time)
+        if (ak <= cs) {
+            c++;  // Increment count if student is on time
+        }
+    }
+    
+    // If the number of students on time is >= m, class is not cancelled
+    if (c >= m) {
+        printf("No\n");  // Class is not cancelled
+    } else {
+        printf("Yes\n");  // Class is cancelled
+    }
+    
+    return 0;
+}
