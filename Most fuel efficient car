@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n, fuel, distance, i, max_efficient_car = 1;
+    float efficiency, max_efficiency = 0.0;
+
+    // Input: Number of cars
+    printf("Enter the number of cars: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        // Input: Fuel and distance for each car
+        printf("Enter the fuel consumed (liters) and distance covered (km) for car %d: ", i);
+        scanf("%d %d", &fuel, &distance);
+
+        // Calculate fuel efficiency for the current car
+        efficiency = (float)distance / fuel;
+
+        // Update the most fuel-efficient car
+        if (efficiency > max_efficiency) {
+            max_efficiency = efficiency;
+            max_efficient_car = i;
+        }
+    }
+
+    // Output: The number of the most fuel-efficient car
+    printf("The most fuel-efficient car is: %d\n", max_efficient_car);
+
+    return 0;
+}
