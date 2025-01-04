@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int n; // Number of matches
+    scanf("%d", &n);
+
+    int a[n], b[n]; // Arrays to store scores of Team A and Team B
+    int winsA = 0, winsB = 0, ties = 0; // Counters for wins and ties
+
+    // Input scores for Team A
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    // Input scores for Team B
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &b[i]);
+    }
+
+    // Compare scores match by match
+    for (int i = 0; i < n; i++) {
+        if (a[i] > b[i]) {
+            winsA++; // Team A wins
+        } else if (a[i] < b[i]) {
+            winsB++; // Team B wins
+        } else {
+            ties++; // It's a tie
+        }
+    }
+
+    // Determine and print the result
+    if (winsA > winsB) {
+        printf("Team A %d %d %d\n", winsA, winsB, ties);
+    } else if (winsB > winsA) {
+        printf("Team B %d %d %d\n", winsA, winsB, ties);
+    } else {
+        // If both have equal wins, it's ambiguous
+        printf("Tie %d %d %d\n", winsA, winsB, ties);
+    }
+
+    return 0;
+}
