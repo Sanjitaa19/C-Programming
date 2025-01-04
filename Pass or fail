@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+  int x, y, password;
+  scanf("%d", &x);
+  scanf("%d",&y);
+  scanf("%d",&password);
+
+  //Logic below to check for the valid password.
+  if(password%x==0 || password%y==0) {
+    printf("accept");
+  } else {
+    printf("reject");
+  }
+  return 0;
+}
