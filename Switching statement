@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+  char input;
+
+  input = getchar();
+  getchar(); //To cater to the Enter keystroke
+
+  switch(input) {
+    case 'e':
+      printf("egg");
+      break;
+    case 'f':
+      printf("fish");
+      break;
+    case 'h':
+      printf("hen");
+      break;
+    case 'q':
+      printf("queen");
+      break;
+    case 'u':
+      printf("umbrella");
+      break;
+  }//end of switch statement
+  return 0;
+}
