@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int f,s;
+    scanf("%d",&f);
+    scanf("%d",&s);
+    int k=f%10;
+    int y=s%10;
+    int p=k+y;
+    printf("%d",p);
+    return 0;
+}
