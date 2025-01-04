@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  char s[100];
+  char c;
+  scanf("%s\n%c", &s, &c);
+  for (int i = 0; s[i] != '\0' && s[i] != c; i++) {
+    printf("%c", s[i]);
+  }
+  return 0;
+}
