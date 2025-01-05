@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{
+int x, y, choice;
+scanf("%d", &x);
+scanf("%d",&y);
+scanf("%d",&choice);
+int result;
+
+//Your Logic here
+switch(choice){
+case 1:
+    result = x + y;
+    printf("%d", result);
+    break;
+case 2:
+    result = x - y;
+    printf("%d", result);
+    break;
+case 3:
+    result = x * y;
+    printf("%d", result);
+    break;
+case 4:
+    result = x / y;
+    printf("%d", result);
+    break;
+}
+
+}//end of main method
