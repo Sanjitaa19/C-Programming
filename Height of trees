@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int N, X;
+    // Input N and X
+    scanf("%d %d", &N, &X);
+
+    int heights[N];
+    int sum = 0;
+
+    // Input tree heights
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &heights[i]);
+        // If height is greater than X, add the excess height to the sum
+        if (heights[i] > X) {
+            sum += (heights[i] - X);
+        }
+    }
+
+    // Output the sum of the cut down heights
+    printf("%d\n", sum);
+
+    return 0;
+}
