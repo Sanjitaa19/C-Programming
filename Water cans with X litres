@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int N, X, i, total = 0, extra;
+    scanf("%d %d", &N, &X);
+
+    int cans[N];
+    for (i = 0; i < N; i++) {
+        scanf("%d", &cans[i]);
+        total += cans[i];
+    }
+
+    if (total == N * X) {
+        printf("NO NEED\n");
+    } else if (total > N * X) {
+        extra = total - (N * X);
+        printf("%d EXCESS\n", extra);
+    } else {
+        extra = (N * X) - total;
+        printf("%d NEEDED\n", extra);
+    }
+
+    return 0;
+}
