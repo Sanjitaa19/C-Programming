@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char s[1000],c;
+    int i,count=0;
+    scanf("%s %c",&s,&c);
+    for(i=1;i<strlen(s);i+=2)
+    {
+        if(s[i]==c)
+            count++;
+    }
+    printf("%d",count);
+    return 0;
+}
