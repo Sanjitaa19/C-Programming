@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <ctype.h> // For the isalpha() function
+
+int main() {
+    char S[1001]; // To handle strings up to length 1000
+    fgets(S, 1001, stdin); // Use fgets to read the whole line, including spaces
+
+    for (int i = 0; S[i] != '\0'; i++) {
+        // Check if the character is an alphabet
+        if (isalpha(S[i])) {
+            printf("%c", S[i]);
+        }
+    }
+
+    // Add a newline for clean output
+    printf("\n");
+
+    return 0;
+}
