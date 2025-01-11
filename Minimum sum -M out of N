@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int N, M, i, j, temp;
+    scanf("%d %d", &N, &M);
+
+    int arr[N];
+    for (i = 0; i < N; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Sort the array in ascending order
+    for (i = 0; i < N - 1; i++) {
+        for (j = i + 1; j < N; j++) {
+            if (arr[i] > arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    // Calculate the sum of the smallest M elements
+    int minSum = 0;
+    for (i = 0; i < M; i++) {
+        minSum += arr[i];
+    }
+
+    // Print the result
+    printf("%d\n", minSum);
+
+    return 0;
+}
