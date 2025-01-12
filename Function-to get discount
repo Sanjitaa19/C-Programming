@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function to calculate the price after applying a discount
+double getPriceAfterDiscount(int price, int discount) {
+    return price * (1 - discount / 100.0);
+}
+
+int main() {
+    int price, discount;
+
+    // Example input
+    printf("Enter the price of the item: ");
+    scanf("%d", &price);
+    printf("Enter the discount percentage: ");
+    scanf("%d", &discount);
+
+    // Calculate and display the price after the discount
+    double finalPrice = getPriceAfterDiscount(price, discount);
+    printf("Price after %d%% discount: %.2f\n", discount, finalPrice);
+
+    return 0;
+}
