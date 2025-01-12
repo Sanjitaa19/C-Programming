@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    
+    // Input two integers
+    scanf("%d %d", &x, &y);
+    
+    // Get the unit digits of x and y
+    int k = x % 10; // Unit digit of X
+    int r = y % 10; // Unit digit of Y
+
+    // Print digits from unit digit of X to unit digit of Y
+    if (k <= r) {
+        for (int i = k; i <= r; i++) {
+            printf("%d ", i);
+        }
+    } else {
+        for (int i = k; i >= r; i--) {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
