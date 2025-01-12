@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int getDigitXCount(int n, int x){
+    int c=0;
+    while(n!=0){
+        if(n%10 == x)
+            c++;
+        n=n/10;
+    }
+    return c;
+}
+int main(){
+    int N, X;
+    printf("Enter the integer N: ");
+    scanf("%d",&N);
+    printf("Enter the digit X: ");
+    scanf("%d",&X);
+    int c = getDigitXCount(N, X);
+    printf("%d",c);
+}
