@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Function to calculate the number of common factors
+int commonFactors(int a, int b) {
+    int count = 0;
+    for (int i = 1; i <= (a < b ? a : b); i++) { // Loop up to the smaller number
+        if (a % i == 0 && b % i == 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Call the function to calculate common factors
+    int result = commonFactors(num1, num2);
+
+    // Output the result
+    printf("Number of common factors: %d\n", result);
+
+    return 0;
+}
