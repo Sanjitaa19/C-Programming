@@ -1,0 +1,9 @@
+int areFirstAndLastSame (char *s){
+    int k=strlen(s);
+    for(int i=0; s[i] != '\0'; i++){
+        if(s[0]==s[k-1]){
+            return 1;
+        }
+    }
+    return 0;
+}
