@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 5; // 0101
+    unsigned int b = 3; // 0011
+    unsigned int result = a & b; // 0001
+    printf("Bitwise AND: %u & %u = %u\n", a, b, result);
+    return 0;
+}
