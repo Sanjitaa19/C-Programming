@@ -9,12 +9,3 @@ void replaceDWithAsterisk(char* str) {
 return str;
 }
 
-int main() {
-    char str[] = "Hello world, how are you doing today?";
-    
-    replaceDWithAsterisk(str);
-    
-    printf("Modified string: %s\n", str);
-    
-    return 0;
-}
