@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 5; // 0101
+    unsigned int b = 3; // 0011
+    unsigned int result = a | b; // 0111
+    printf("Bitwise OR: %u | %u = %u\n", a, b, result);
+    return 0;
+}
