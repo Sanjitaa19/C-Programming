@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 5; // 0101
+    unsigned int result = a << 2; // 10100
+    printf("Left Shift: %u << 2 = %u\n", a, result);
+    return 0;
+}
