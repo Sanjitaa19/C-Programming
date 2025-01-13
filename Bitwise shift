@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 5; // 0101
+    unsigned int result = ~a; // Invert all bits
+    printf("Bitwise NOT: ~%u = %u\n", a, result);
+    return 0;
+}
