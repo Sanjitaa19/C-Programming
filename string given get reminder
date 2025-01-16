@@ -1,0 +1,7 @@
+int getRemainder (char *str, int K) {
+    int m = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        m = (m * 10 + (str[i] - '0')) % K;
+    }
+    return m;
+}
