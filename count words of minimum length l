@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[1050]; // Slightly larger buffer to handle input
+    int L, count = 0;
+
+    // Read the string
+    fgets(str, sizeof(str), stdin);
+
+    // Remove the trailing newline character from fgets input
+    str[strcspn(str, "\n")] = 0;
+
+    // Read the integer L
+    scanf("%d", &L);
+
+    // Tokenize the string and count words with length >= L
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        if ((int)strlen(token) >= L) {
+            count++;
+        }
+        token = strtok(NULL, " ");
+    }
+
+    // Print the count
+    printf("%d\n", count);
+
+    return 0;
+}
