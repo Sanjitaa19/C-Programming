@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n], r[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &r[i]);
+    }
+
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        int product = arr[i] * r[n - 1 - i]; // Pair elements in reverse from the second row
+        if (product > 0) {
+            sum += product; // Add only positive products
+        }
+    }
+
+    printf("%d\n", sum);
+    return 0;
+}
