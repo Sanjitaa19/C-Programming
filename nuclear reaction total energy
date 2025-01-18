@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+    int e, r, t;
+    scanf("%d %d %d", &e, &r, &t);
+
+    int sum = e; // Initialize sum with initial energy
+    for (int i = 1; i < t; i++) {
+        sum += (e + (i * r));  // Calculate energy for each second and add to sum
+    }
+    printf("%d", sum);
+    return 0;
+}
