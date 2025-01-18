@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+  int n, v, count = 0;
+
+  // Input the number of rows and columns (N) and the voltage (V).
+  scanf("%d %d", &n, &v);
+
+  // Iterate through each house in the matrix.
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+      // Calculate the voltage for the current house.
+      int voltage = i * j;
+
+      // If the voltage matches the desired value, increment the count.
+      if (voltage == v) {
+        count++;
+      }
+    }
+  }
+
+  // Print the number of houses that receive the desired voltage, or -1 if none.
+  if (count > 0) {
+    printf("%d\n", count);
+  } else {
+    printf("-1\n");
+  }
+
+  return 0;
+}
