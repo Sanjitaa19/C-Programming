@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Function to check if N has exactly K digits
+void containsKDigits(long long int N, int K) {
+    int count = 0;
+    
+    
+        // Count the number of digits in N
+        while (N > 0) {
+            N /= 10;
+            count++;
+        
+    }
+    
+    // Compare the count with K
+    if (count == K) {
+        printf("True %d\n", count);
+    } else {
+        printf("False %d\n", count);
+    }
+}
+
+int main() {
+    long long int N;
+    int K;
+
+    // Input values for N and K
+    printf("Enter the number N: ");
+    scanf("%lld", &N);
+
+    printf("Enter the number of digits K: ");
+    scanf("%d", &K);
+
+    // Call the function
+    containsKDigits(N, K);
+
+    return 0;
+}
