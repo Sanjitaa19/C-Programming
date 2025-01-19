@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n); // Read input N
+
+    // Calculate the triangular number T
+    int T = (n * (n + 1)) / 2;
+
+    int sum_of_factors = 0;
+
+    // Find all factors of T (excluding T itself)
+    for (int i = 1; i < T; i++) {
+        if (T % i == 0) {
+            sum_of_factors += i; // Add the factor to the sum
+        }
+    }
+
+    // Special case: If N is 1, output should be 1
+    if (n == 1) {
+        printf("1\n");
+    } else {
+        // Print the sum of factors excluding T
+        printf("%d\n", sum_of_factors);
+    }
+
+    return 0;
+}
