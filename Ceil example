@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h> // For ceil function
+
+int main() {
+    int R1, N, R2, X;
+    scanf("%d %d %d %d", &R1, &N, &R2, &X); // Read the input values
+
+    // Convert minutes to hours, using ceiling for partial hours
+    int total_hours = (int)ceil((double)X / 60);
+
+    int cost = 0;
+
+    if (total_hours <= N) {
+        // If total hours are within the first N hours
+        cost = total_hours * R1;
+    } else {
+        // If total hours exceed N hours
+        cost = (N * R1) + ((total_hours - N) * R2);
+    }
+
+    // Print the total travel cost
+    printf("%d\n", cost);
+
+    return 0;
+}
