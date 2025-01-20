@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+
+    // Prompt user for the size of the array
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    // Input elements of the array
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Check each number in the array
+    for (int i = 0; i < n; i++) {
+        int sqrtNum = (int)sqrt(arr[i]);
+        if (arr[i] < 0) {
+            printf("%d is not a perfect square.\n", arr[i]);
+        } else if (sqrtNum * sqrtNum == arr[i]) {
+            printf("%d is a perfect square.\n", arr[i]);
+        } else {
+            printf("%d is not a perfect square.\n", arr[i]);
+        }
+    }
+
+    return 0;
+}
