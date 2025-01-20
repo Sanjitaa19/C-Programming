@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N, T, X, Y, potatoCount = 0;
+    scanf("%d %d", &N, &T);
+    scanf("%d %d", &X, &Y);
+
+    // Iterate through all possible combinations of potatoes and carrots
+    for (int i = 0; i <= T; i++) {
+        int j = T - i;
+        // Check if the cost of the combination matches N
+        if ((i * X) + (j * Y) == N) {
+            potatoCount = i;
+            break;
+        }
+    }
+
+    // Print the result
+    if (potatoCount > 0) {
+        printf("%d\n", potatoCount);
+    } else {
+        printf("-1\n");
+    }
+
+    return 0;
+}
