@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+// Function to calculate total points for all cards
+int getTotalPoints(int p, int q, int r, int s) {
+    int points = 0;
+
+    // Check points for card p
+    if (p == 11) points += 3;  // Jack
+    else if (p == 12) points += 2;  // Queen
+    else if (p == 1) points += 1;   // Ace
+    else points += 0;  // Any other card contributes 0 points
+
+    // Check points for card q
+    if (q == 11) points += 3;  // Jack
+    else if (q == 12) points += 2;  // Queen
+    else if (q == 1) points += 1;   // Ace
+    else points += 0;  // Any other card contributes 0 points
+
+    // Check points for card r
+    if (r == 11) points += 3;  // Jack
+    else if (r == 12) points += 2;  // Queen
+    else if (r == 1) points += 1;   // Ace
+    else points += 0;  // Any other card contributes 0 points
+
+    // Check points for card s
+    if (s == 11) points += 3;  // Jack
+    else if (s == 12) points += 2;  // Queen
+    else if (s == 1) points += 1;   // Ace
+    else points += 0;  // Any other card contributes 0 points
+
+    return points;  // Return the total points
+}
+
+// Main function (example usage)
+int main() {
+    int p, q, r, s;
+
+    // Reading inputs
+    printf("Enter the values of the 4 cards (space-separated): ");
+    scanf("%d %d %d %d", &p, &q, &r, &s);
+
+    // Calculating and printing the total points
+    int totalPoints = getTotalPoints(p, q, r, s);
+    printf("Total Points: %d\n", totalPoints);
+
+    return 0;
+}
