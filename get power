@@ -1,0 +1,9 @@
+double root(int val, int square) {
+  double res = -1;
+  if (square == 1) {
+    res = pow(val, 1/2.0);
+  } else {
+    res = pow(val, 1/3.0);
+  }
+  return res;
+}
