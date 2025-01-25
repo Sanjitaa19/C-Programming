@@ -1,0 +1,16 @@
+int calculateTotalTax (int B, int *billingAmounts) {
+    int totalTax = 0;
+    for (int i = 0; i < B; i++) {
+        if (billingAmounts[i] > 1000) {
+            totalTax += (billingAmounts[i] - 1000) * 0.1;
+        }
+    }
+    return totalTax;
+}
+int main() {
+    int B = 4;
+    int billingAmounts[4] = {4000, 2000, 1000, 5000};
+    int totalTax = calculateTotalTax(B, billingAmounts);
+    printf("Total Tax: %d\n", totalTax); // Output: Total Tax: 800
+    return 0;
+} c
