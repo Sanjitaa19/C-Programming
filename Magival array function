@@ -1,0 +1,10 @@
+int magicalArray(int N, int arr[], int K) {
+    int count = 0; // To store the total operations
+    for (int i = 0; i < N - 1; i++) {
+        while (arr[i] >= arr[i + 1]) {
+            arr[i + 1] += K; // Increment arr[i+1] by K
+            count++;         // Increment the operation count
+        }
+    }
+    return count; // Return the total operations needed
+}
