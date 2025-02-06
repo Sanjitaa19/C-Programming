@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    char s[1001];
+    int c = 0; // To count occurrences
+    scanf("%s", s);
+
+    for (int i = 1; s[i] != '\0'; i++) {
+        if (s[i] == s[i - 1] && (i == 1 || s[i] != s[i - 2])) {
+            c++;
+        }
+    }
+
+    printf("%d\n", c);
+    return 0;
+}
