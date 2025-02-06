@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int n,d;
+	scanf("%d %d", &n, &d);
+	int k=n-d;
+	for(int i=k;i>0; i-=d) {
+		printf("%d ",i);
+	}
+}
