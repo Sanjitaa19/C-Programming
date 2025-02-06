@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[101];
+    int len, mid;
+
+    // Input string
+    printf("Enter the string: ");
+    scanf("%s", str);
+
+    // Find string length
+    len = strlen(str);
+
+   
+        mid = len / 2;
+
+        // Print middle three characters
+        printf("Middle three characters: %c%c%c\n", str[mid - 1], str[mid], str[mid + 1]);
+    
+
+    return 0;
+}
