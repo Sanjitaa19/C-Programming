@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int inputValue;
+    scanf("%d", &inputValue);
+
+    unsigned short ages[inputValue];
+
+    // Calculate the size of the array
+    int arraySize = sizeof(ages) / sizeof(unsigned short);
+
+    printf("%d", arraySize);
+
+    return 0;
+}
