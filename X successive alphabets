@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[101];
+    char ch;
+
+    scanf("%s %c", s, &ch);
+
+    int count = 0;
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == ch) {
+            count++;
+        }
+    }
+
+    // Corrected printing loop:
+    for (int i = 0; i < count; i++) {
+        printf("%c", ch);
+        ch++;  // Move to the next character
+        if (ch > 'z') {
+            ch = 'a'; // Wrap around if it exceeds 'z'
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
