@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char stringvalue[100];
+    scanf("%s", stringvalue);
+
+    for (int i = 0; stringvalue[i] != '\0'; i++) {
+        if (stringvalue[i] >= 'a' && stringvalue[i] <= 'z') {
+            printf("%c", stringvalue[i]);
+        }
+    }
+    return 0;
+}
