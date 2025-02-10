@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+#define ABC 100  // ABC is defined with value 100
+
+void main() {
+#ifdef ABC       // Checks if ABC is defined
+    printf("%d", ABC);  // Since ABC is defined, this will execute
+#else
+    return;   // This won't execute because ABC is already defined
+#endif
+}
