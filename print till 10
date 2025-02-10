@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num, N;
+    scanf("%d", &N);
+
+    for(int ctr = 1; ctr <= N; ctr++)  // Starts from 1, should be 0
+    {
+        scanf("%d", &num);
+        if(num == 10) {
+            break;  // Exit loop if num is 10
+        }
+        printf("%d", num);  // Print number only if not breaking
+    }
+
+    return 0;
+}
