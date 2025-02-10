@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[101];        // Array to store the input string (max length 100)
+    scanf("%s", str);     // Read the input string
+    
+    int index = 0, weight = 0;  // Initialize index and weight to 0
+    
+    while (str[index] != '\0') {    // Loop through the string until the null character
+        char ch = tolower(str[index]);  // Convert the current character to lowercase
+        weight += (ch - 'a' + 1);       // Calculate the weight of the character and add to the total weight
+        index++;                        // Move to the next character
+    }
+    
+    printf("%d", weight);  // Print the final weight of the string
+    return 0;
+}
