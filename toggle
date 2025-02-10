@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    char ch;
+    scanf("%c", &ch);  // Corrected scanf
+
+    if (ch >= 'A' && ch <= 'Z') {  // Check for uppercase
+        ch = ch + ('a' - 'A');  // Convert to lowercase
+    } else if (ch >= 'a' && ch <= 'z') {  // Check for lowercase
+        ch = ch - ('a' - 'A');  // Convert to uppercase
+    }
+
+    printf("%c", ch);  // Print toggled character
+    return 0;
+}
