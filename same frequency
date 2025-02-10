@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char str[1001]; // Array to store the input string (max length 1000)
+    scanf("%s", str); // Read the input string
+
+    int alphaCount[26] = {0}, count; // Array to count occurrences of each letter
+    // `alphaCount` has 26 elements initialized to 0, one for each letter 'a' to 'z'
+
+    // Count the frequency of each character
+    for (int index = 0; str[index] != '\0'; index++) {
+        alphaCount[str[index] - 'a']++; // Increment the count of the respective character
+    }
+
+    count = alphaCount[str[0] - 'a']; // Use the frequency of the first character as the reference frequency
+
+    // Check if all non-zero frequencies match the reference frequency
+    for (int index = 0; index < 26; index++) {
+        if (alphaCount[index] > 0 && count != alphaCount[index]) {
+            printf("NO\n"); // If a mismatch is found, print "NO"
+            return 0; // Exit the program
+        }
+    }
+
+    printf("YES\n"); // If all frequencies match, print "YES"
+    return 0; // Exit the program
+}
