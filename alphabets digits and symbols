@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+    char str[1001];  // Declare a character array to store the input string
+    scanf("%s", str);  // Read the input string
+
+    // First loop: Print alphabets
+    for (int index = 0; str[index] != '\0'; index++) {
+        if (isalpha(str[index])) {
+            printf("%c", str[index]);
+        }
+    }
+
+    // Second loop: Print digits
+    for (int index = 0; str[index] != '\0'; index++) {
+        if (isdigit(str[index])) {
+            printf("%c", str[index]);
+        }
+    }
+
+    // Third loop: Print special characters
+    for (int index = 0; str[index] != '\0'; index++) {
+        if (!isalpha(str[index]) && !isdigit(str[index])) {
+            printf("%c", str[index]);
+        }
+    }
+
+    return 0;
+}
