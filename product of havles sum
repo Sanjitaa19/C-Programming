@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int arr[100], count = 0, firstHalfSum = 0, secondHalfSum = 0;
+
+    // Read input until EOF or new line
+    while (scanf("%d", &arr[count]) == 1) {
+        count++;
+    }
+
+    // Find the middle index
+    int mid = count / 2;
+
+    // Compute sum of first half
+    for (int i = 0; i < mid; i++) {
+        firstHalfSum += arr[i];
+    }
+
+    // Compute sum of second half (including middle element if count is odd)
+    for (int i = mid; i < count; i++) {
+        secondHalfSum += arr[i];
+    }
+
+    // Print the product of the two sums
+    printf("%d", firstHalfSum * secondHalfSum);
+
+    return 0;
+}
