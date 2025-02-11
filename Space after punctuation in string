@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    char str[101];
+    scanf(" %[^\n]s", str);  // Read full input line
+
+    for (int index = 0; str[index] != '\0'; index++) {
+        printf("%c", str[index]);
+
+        // If punctuation is found and the next character is not a space, add a space
+        if (str[index] == '.' || str[index] == ',' || str[index] == '!' || str[index] == '?') {
+            printf(" ");
+        }
+    }
+    return 0;
+}
