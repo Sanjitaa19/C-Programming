@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int n, x;
+    scanf("%d %d", &n, &x);
+    
+    int result = n % (int)pow(10, x); // Extract last x digits
+    printf("%d", result);
+    
+    return 0;
+}
