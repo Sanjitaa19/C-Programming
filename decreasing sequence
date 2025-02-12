@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int n, d;
+    scanf("%d %d", &n, &d);
+
+    while (d > 0) {
+        n -= d;         // Decrement n by d
+        printf("%d ", n); // Print n with space
+        d--;            // Decrement d
+    }
+
+    return 0;
+}
