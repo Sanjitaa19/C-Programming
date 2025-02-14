@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int N, M, total = 0;
+    scanf("%d %d", &N, &M);
+
+    for (int i = 0; i < M; i++) {
+        total += N;
+        N += 3; // Increase the enemy count by 3 for the next level
+    }
+
+    printf("%d\n", total);
+    return 0;
+}
