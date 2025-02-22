@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    // Check if the least significant bit (LSB) is 1 using bitwise AND
+    if (N & 1) {
+        printf("YES");
+    } else {
+        printf("NO");
+    }
+    
+    return 0;
+}
