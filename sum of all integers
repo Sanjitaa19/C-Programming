@@ -1,0 +1,15 @@
+int allDigitSum(int *arr, int LENGTH) {
+    int totalSum = 0;
+    
+    for (int i = 0; i < LENGTH; i++) {
+        int num = arr[i];
+        
+        // Extract and sum up digits of each number
+        while (num > 0) {
+            totalSum += num % 10;  // Get the last digit
+            num /= 10;  // Remove last digit
+        }
+    }
+    
+    return totalSum;
+}
