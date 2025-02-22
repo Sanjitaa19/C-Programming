@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    char unit;
+    
+    scanf("%d %c", &age, &unit);
+    
+    // If input is in months and less than 12, print "Yes"
+    // If input is in years, it is always "No"
+    if ((unit == 'm' && age < 12) || (unit == 'y' && age == 0)) {
+        printf("Yes");
+    } else {
+        printf("No");
+    }
+    
+    return 0;
+}
