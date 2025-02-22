@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[10001];
+    
+    scanf("%s", s); // Read the input string
+    
+    for (int i = 0; s[i] != '\0'; i += 2) { // Loop through alternate characters
+        printf("%c", s[i]);
+    }
+    printf("\n"); // Add a newline for proper formatting
+    
+    return 0;
+}
