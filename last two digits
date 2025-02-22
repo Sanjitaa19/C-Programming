@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int M, last_two_digits, sum_last_two;
+    scanf("%d", &M);
+    
+    last_two_digits = M % 100; // Extract last two digits
+    if (last_two_digits < 10) { // If last two digits are single digit, consider 0 as the first digit
+        sum_last_two = last_two_digits;  
+    } else {
+        sum_last_two = (last_two_digits / 10) + (last_two_digits % 10);
+    }
+
+    if (M % sum_last_two == 0) {
+        printf("YES");
+    } else {
+        printf("NO");
+    }
+
+    return 0;
+}
