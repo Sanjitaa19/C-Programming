@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+
+    int bands[10] = {0}; // Array to store counts for each band
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+
+        if (arr[i] >= 0 && arr[i] <= 10) bands[0]++;
+        else if (arr[i] >= 11 && arr[i] <= 20) bands[1]++;
+        else if (arr[i] >= 21 && arr[i] <= 30) bands[2]++;
+        else if (arr[i] >= 31 && arr[i] <= 40) bands[3]++;
+        else if (arr[i] >= 41 && arr[i] <= 50) bands[4]++;
+        else if (arr[i] >= 51 && arr[i] <= 60) bands[5]++;
+        else if (arr[i] >= 61 && arr[i] <= 70) bands[6]++;
+        else if (arr[i] >= 71 && arr[i] <= 80) bands[7]++;
+        else if (arr[i] >= 81 && arr[i] <= 90) bands[8]++;
+        else if (arr[i] >= 91 && arr[i] <= 100) bands[9]++;
+    }
+
+    for (int i = 0; i < 10; i++) {
+        printf("Band %d-%d: %d\n", i * 10, i * 10 + 10, bands[i]);
+    }
+
+    return 0;
+}
