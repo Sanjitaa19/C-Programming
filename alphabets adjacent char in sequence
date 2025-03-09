@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[1001];
+    int count = 0;
+    
+    // Read input string
+    scanf("%s", str);
+    
+    int len = strlen(str);
+    
+    // Loop through the string and check for adjacent sequential pairs
+    for (int i = 0; i < len - 1; i++) {
+        if (str[i] + 1 == str[i + 1]) {
+            count++;
+        }
+    }
+    
+    // Print the count
+    printf("%d\n", count);
+
+    return 0;
+}
